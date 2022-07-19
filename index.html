@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colour changer</title>
+    <style>
+        .container{
+            
+            margin-left: 550px;
+            margin-top: 250px;
+        }
+        @media (max-width:430px) {
+            .container{
+            
+            margin-left: 30%;
+            margin-top: 175px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter the colour</h1>
+        <input type="text" id="text">
+        <button id="button" onclick="change()">change</button>
+        <p id="display"></p>
+    </div>
+    <script>
+        var colour=document.getElementById("text");
+        
+        function change(){
+            document.body.style.backgroundColor=colour.value;
+            document.getElementById("display").innerHTML="Back ground changed to "+colour.value;
+        }
+        
+    </script>    
+</body>
+</html>
